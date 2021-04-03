@@ -1,0 +1,129 @@
+/*
+    @Arthur: Owen Kalungwe
+    v1.0
+*/
+@import url('zmdi/css/material-design-iconic-font.min.css');
+
+#kkPlayer{
+    width:100%;
+    height: 100px;
+    border:1px solid #2e2e2e;
+    border-radius: 10px;
+    color: #ffffff;
+    -webkit-tap-highlight-color: unset;
+    outline:none !important;
+    background: #191919 no-repeat;
+    background-size: cover;
+}
+
+#kkPlayer div{
+    float:left;
+    height:100px;
+    width:8%;
+}
+
+#kkPlayer div.play{
+    text-align: center;
+    color: #0E3E9C;
+}
+
+#kkPlayer div.play span,
+#kkPlayer div.player_mute span{
+    display:block;
+}
+
+#kkPlayer div.last_duration,
+#kkPlayer div.total_duration{
+    line-height:100px;
+    text-align:center;
+    font-size:18px;
+}
+
+#kkPlayer div.seeker{
+    width: 60%;
+}
+
+#kkPlayer div.seeker span{
+    width:100%;
+    background: rgba(6, 6, 6, 0.84);
+    padding:0;
+    display:block;
+    height:9px;
+    border-radius: 20px;
+    cursor:pointer;
+}
+
+#kkPlayer div.seeker span i{
+    width:0%;
+    background:#DC2878;
+    padding:0;
+    display:block;
+    height:9px;
+    border-radius: 20px;
+}
+
+#kkPlayer div.progress_volume span{
+    width: 20%;
+    float:left;
+    height:10px;
+    background: rgba(6, 6, 6, 0.3);
+}
+
+#kkPlayer div.progress_volume span:first-child{
+    border-top-left-radius:20px;
+    border-bottom-left-radius:20px;
+}
+
+#kkPlayer div.progress_volume span:last-child{
+    border-top-right-radius:20px;
+    border-bottom-right-radius:20px;
+}
+
+#kkPlayer div.progress_volume span:hover{
+    background: rgb(0, 0, 223);
+    cursor:pointer;
+}
+
+#kkPlayer div.progress_volume span:last-child{
+    width:18%;
+    margin-right:2%;
+}
+
+#kkPlayer .v-active{
+    background: #007fac !important;
+}
+
+#kkPlayer .v-active:hover{
+    background: #ac2c84 !important;
+}
+
+#kkPlayer .visual{
+    position: fixed;
+    margin-top:77px;
+    height:20px;
+    transform:rotate(180deg);
+}
+
+#kkPlayer .visual i{
+    float:left;
+    width:1%;
+    height:20px;
+    display:block;
+    background: rgba(37, 37, 37, 0.73);
+}
+
+#kkPlayer .zmdi-volume-off{
+    color: rgba(6, 6, 6, 0.34);
+}
+
+#kkPlayer .visual i:nth-child(even){
+    background: rgba(6, 6, 6, 0.34);
+}
+
+@media only screen and (max-width: 600px) {
+    #kkPlayer div.last_duration,
+    #kkPlayer div.total_duration{
+        font-size:10px !important;
+        text-align: center;
+    }
+}

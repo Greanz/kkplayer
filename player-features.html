@@ -1,0 +1,49 @@
+<!--
+    @Arthur: Owen Kalungwe
+    v1.0
+    for Zola Music
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Player</title>
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/player.js"></script>
+    <link href="assets/css/player.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="kkPlayer" data-src="assets/audio/2.mp3" data-trackID="1"></div>
+<p></p>
+<button onclick="player.setThumbnail('assets/images/2.jpg');">Set Background 1</button>
+<button onclick="player.setThumbnail('assets/images/1.jpg');">Set Background 2</button>
+<button onclick="player.setThumbnail('');">Set No Background</button>
+<button onclick="player.play();">Pay</button>
+<button onclick="player.pause();">Pause</button>
+<button onclick="player.startVisualEffects();">Enable visual effects</button>
+<button onclick="player.disableVisualEffects();">Disable visual effects</button>
+<button onclick="player.enableRepeat()">Repeat - Enable/Disable</button>
+
+<script type="text/javascript">
+    let c=2;
+    //player.autoPlay=true; // file will play once loaded - this require player.source to be set
+    //player.seekOnMouseMove=true; // Allow seeking on mouse move
+    //player.preload=true; // load full file once dom is ready
+    //player.thumbnail='assets/images/1.jpg'; //set file thumbnail
+    //player.enableVisualize=true; //enable enable Visualization
+    //player.source = 'assets/audio/1.mp3'; // set file to be played
+    /*
+        player support playing file from html attr data-src if present
+        //<div class="kkPlayer" data-src="assets/audio/2.mp3"></div>
+     */
+    //player.trackIdentifier = '1'; // file id to update database
+    player.player('.kkPlayer');
+</script>
+<button onclick="player.newTrackId(c++);">Set new track Id</button>
+<p></p>
+
+<button onclick="player.playFile('assets/audio/1.mp3');player.setThumbnail('');">Play Music 1</button>
+<button onclick="player.playFile('assets/audio/2.mp3');player.setThumbnail('');">Play Music 2</button>
+<button onclick="player.playFile('assets/audio/1.mp3');player.setThumbnail('assets/images/2.jpg');">Play Music 1 and set background</button>
+</body>
+</html>
